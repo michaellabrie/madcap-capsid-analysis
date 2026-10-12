@@ -1,0 +1,272 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.25.1",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "cYea",
+      "code_hash": "b966762267bfbdbba57797c6adbee8e4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RPlz",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "UUgI",
+      "code_hash": "077fe70f9c0ed7f118bee095a1e2057c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"sequence-based-discovery-and-prioritization-of-novel-aav-capsids\">Sequence-Based Discovery and Prioritization of Novel AAV Capsids</h1>\n<h2 id=\"research-question\">Research Question</h2>\n<span class=\"paragraph\">How does sequence similarity to known natural AAV isolates vary among\nMADCAP-discovered capsids, and can sequence-diversity metrics be used\nto identify candidates for further structural and experimental\ncharacterization?</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "rgAh",
+      "code_hash": "1db19b7319edfbf62ff3f28bddce29ba",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='rgAh-0' random-id='06d65af3-23ad-15c2-2731-e09be74daeba'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC20&#92;&quot;,&#92;&quot;MC20&#92;&quot;:NaN,&#92;&quot;MC21&#92;&quot;:99.862,&#92;&quot;MC26&#92;&quot;:99.174,&#92;&quot;MC27&#92;&quot;:99.311,&#92;&quot;MC22&#92;&quot;:98.898,&#92;&quot;MC37&#92;&quot;:93.81,&#92;&quot;MC41&#92;&quot;:93.535,&#92;&quot;MC25&#92;&quot;:94.085,&#92;&quot;MC42&#92;&quot;:93.802,&#92;&quot;MC38&#92;&quot;:94.077,&#92;&quot;MC23&#92;&quot;:91.747,&#92;&quot;MC24&#92;&quot;:91.747,&#92;&quot;hu.56&#92;&quot;:83.152,&#92;&quot;hu.57&#92;&quot;:83.152,&#92;&quot;MC5&#92;&quot;:83.424,&#92;&quot;hu.35&#92;&quot;:83.288,&#92;&quot;hu.34&#92;&quot;:83.152,&#92;&quot;AAV2&#92;&quot;:83.56,&#92;&quot;MC19&#92;&quot;:83.288,&#92;&quot;MC126&#92;&quot;:83.56,&#92;&quot;hu.51&#92;&quot;:83.152,&#92;&quot;hu.52&#92;&quot;:82.609,&#92;&quot;hu.47&#92;&quot;:83.152,&#92;&quot;hu.45&#92;&quot;:83.152,&#92;&quot;MC13&#92;&quot;:83.424,&#92;&quot;hu.58&#92;&quot;:82.88,&#92;&quot;hu.49&#92;&quot;:82.88,&#92;&quot;MC8&#92;&quot;:83.832,&#92;&quot;MC12&#92;&quot;:83.696,&#92;&quot;MC9&#92;&quot;:83.696,&#92;&quot;MC14&#92;&quot;:84.103,&#92;&quot;MC114&#92;&quot;:83.832,&#92;&quot;hu.T70&#92;&quot;:83.696,&#92;&quot;MC129&#92;&quot;:83.696,&#92;&quot;MC102&#92;&quot;:83.424,&#92;&quot;MC118&#92;&quot;:83.56,&#92;&quot;hu.29&#92;&quot;:83.424,&#92;&quot;hu.29r&#92;&quot;:83.56,&#92;&quot;hu.28&#92;&quot;:83.016,&#92;&quot;hu.13&#92;&quot;:83.832,&#92;&quot;hu.63&#92;&quot;:83.424,&#92;&quot;hu.64&#92;&quot;:82.88,&#92;&quot;MC1&#92;&quot;:83.56,&#92;&quot;MC3&#92;&quot;:83.56,&#92;&quot;MC6&#92;&quot;:83.424,&#92;&quot;MC4&#92;&quot;:82.337,&#92;&quot;MC103&#92;&quot;:82.609,&#92;&quot;hu.24&#92;&quot;:83.152,&#92;&quot;hu.23&#92;&quot;:83.016},{&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC21&#92;&quot;,&#92;&quot;MC20&#92;&quot;:99.862,&#92;&quot;MC21&#92;&quot;:NaN,&#92;&quot;MC26&#92;&quot;:99.036,&#92;&quot;MC27&#92;&quot;:99.174,&#92;&quot;MC22&#92;&quot;:98.76,&#92;&quot;MC37&#92;&quot;:93.673,&#92;&quot;MC41&#92;&quot;:93.398,&#92;&quot;MC25&#92;&quot;:93.948,&#92;&quot;MC42&#92;&quot;:93.664,&#92;&quot;MC38&#92;&quot;:93.939,&#92;&quot;MC23&#92;&quot;:91.609,&#92;&quot;MC24&#92;&quot;:91.609,&#92;&quot;hu.56&#92;&quot;:83.016,&#92;&quot;hu.57&#92;&quot;:83.016,&#92;&quot;MC5&#92;&quot;:83.288,&#92;&quot;hu.35&#92;&quot;:83.152,&#92;&quot;hu.34&#92;&quot;:83.016,&#92;&quot;AAV2&#92;&quot;:83.424,&#92;&quot;MC19&#92;&quot;:83.152,&#92;&quot;MC126&#92;&quot;:83.424,&#92;&quot;hu.51&#92;&quot;:83.016,&#92;&quot;hu.52&#92;&quot;:82.473,&#92;&quot;hu.47&#92;&quot;:83.016,&#92;&quot;hu.45&#92;&quot;:83.016,&#92;&quot;MC13&#92;&quot;:83.288,&#92;&quot;hu.58&#92;&quot;:82.745,&#92;&quot;hu.49&#92;&quot;:82.745,&#92;&quot;MC8&#92;&quot;:83.696,&#92;&quot;MC12&#92;&quot;:83.56,&#92;&quot;MC9&#92;&quot;:83.56,&#92;&quot;MC14&#92;&quot;:83.967,&#92;&quot;MC114&#92;&quot;:83.696,&#92;&quot;hu.T70&#92;&quot;:83.56,&#92;&quot;MC129&#92;&quot;:83.56,&#92;&quot;MC102&#92;&quot;:83.288,&#92;&quot;MC118&#92;&quot;:83.424,&#92;&quot;hu.29&#92;&quot;:83.288,&#92;&quot;hu.29r&#92;&quot;:83.424,&#92;&quot;hu.28&#92;&quot;:82.88,&#92;&quot;hu.13&#92;&quot;:83.696,&#92;&quot;hu.63&#92;&quot;:83.288,&#92;&quot;hu.64&#92;&quot;:82.745,&#92;&quot;MC1&#92;&quot;:83.424,&#92;&quot;MC3&#92;&quot;:83.424,&#92;&quot;MC6&#92;&quot;:83.288,&#92;&quot;MC4&#92;&quot;:82.201,&#92;&quot;MC103&#92;&quot;:82.473,&#92;&quot;hu.24&#92;&quot;:83.016,&#92;&quot;hu.23&#92;&quot;:82.88},{&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC26&#92;&quot;,&#92;&quot;MC20&#92;&quot;:99.174,&#92;&quot;MC21&#92;&quot;:99.036,&#92;&quot;MC26&#92;&quot;:NaN,&#92;&quot;MC27&#92;&quot;:99.862,&#92;&quot;MC22&#92;&quot;:98.347,&#92;&quot;MC37&#92;&quot;:93.948,&#92;&quot;MC41&#92;&quot;:93.673,&#92;&quot;MC25&#92;&quot;:93.948,&#92;&quot;MC42&#92;&quot;:93.664,&#92;&quot;MC38&#92;&quot;:94.215,&#92;&quot;MC23&#92;&quot;:92.16,&#92;&quot;MC24&#92;&quot;:91.884,&#92;&quot;hu.56&#92;&quot;:82.609,&#92;&quot;hu.57&#92;&quot;:82.609,&#92;&quot;MC5&#92;&quot;:82.88,&#92;&quot;hu.35&#92;&quot;:82.745,&#92;&quot;hu.34&#92;&quot;:82.609,&#92;&quot;AAV2&#92;&quot;:83.016,&#92;&quot;MC19&#92;&quot;:82.745,&#92;&quot;MC126&#92;&quot;:83.016,&#92;&quot;hu.51&#92;&quot;:82.609,&#92;&quot;hu.52&#92;&quot;:82.065,&#92;&quot;hu.47&#92;&quot;:82.609,&#92;&quot;hu.45&#92;&quot;:82.609,&#92;&quot;MC13&#92;&quot;:82.88,&#92;&quot;hu.58&#92;&quot;:82.337,&#92;&quot;hu.49&#92;&quot;:82.337,&#92;&quot;MC8&#92;&quot;:83.288,&#92;&quot;MC12&#92;&quot;:83.152,&#92;&quot;MC9&#92;&quot;:83.152,&#92;&quot;MC14&#92;&quot;:83.56,&#92;&quot;MC114&#92;&quot;:83.288,&#92;&quot;hu.T70&#92;&quot;:83.152,&#92;&quot;MC129&#92;&quot;:83.288,&#92;&quot;MC102&#92;&quot;:83.152,&#92;&quot;MC118&#92;&quot;:83.016,&#92;&quot;hu.29&#92;&quot;:82.88,&#92;&quot;hu.29r&#92;&quot;:83.016,&#92;&quot;hu.28&#92;&quot;:82.473,&#92;&quot;hu.13&#92;&quot;:83.424,&#92;&quot;hu.63&#92;&quot;:82.88,&#92;&quot;hu.64&#92;&quot;:82.337,&#92;&quot;MC1&#92;&quot;:83.016,&#92;&quot;MC3&#92;&quot;:83.016,&#92;&quot;MC6&#92;&quot;:82.88,&#92;&quot;MC4&#92;&quot;:81.793,&#92;&quot;MC103&#92;&quot;:82.065,&#92;&quot;hu.24&#92;&quot;:82.745,&#92;&quot;hu.23&#92;&quot;:82.609},{&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC27&#92;&quot;,&#92;&quot;MC20&#92;&quot;:99.311,&#92;&quot;MC21&#92;&quot;:99.174,&#92;&quot;MC26&#92;&quot;:99.862,&#92;&quot;MC27&#92;&quot;:NaN,&#92;&quot;MC22&#92;&quot;:98.485,&#92;&quot;MC37&#92;&quot;:94.085,&#92;&quot;MC41&#92;&quot;:93.81,&#92;&quot;MC25&#92;&quot;:94.085,&#92;&quot;MC42&#92;&quot;:93.802,&#92;&quot;MC38&#92;&quot;:94.353,&#92;&quot;MC23&#92;&quot;:92.297,&#92;&quot;MC24&#92;&quot;:92.022,&#92;&quot;hu.56&#92;&quot;:82.609,&#92;&quot;hu.57&#92;&quot;:82.609,&#92;&quot;MC5&#92;&quot;:82.88,&#92;&quot;hu.35&#92;&quot;:82.745,&#92;&quot;hu.34&#92;&quot;:82.609,&#92;&quot;AAV2&#92;&quot;:83.016,&#92;&quot;MC19&#92;&quot;:82.745,&#92;&quot;MC126&#92;&quot;:83.016,&#92;&quot;hu.51&#92;&quot;:82.609,&#92;&quot;hu.52&#92;&quot;:82.065,&#92;&quot;hu.47&#92;&quot;:82.609,&#92;&quot;hu.45&#92;&quot;:82.609,&#92;&quot;MC13&#92;&quot;:82.88,&#92;&quot;hu.58&#92;&quot;:82.337,&#92;&quot;hu.49&#92;&quot;:82.337,&#92;&quot;MC8&#92;&quot;:83.288,&#92;&quot;MC12&#92;&quot;:83.152,&#92;&quot;MC9&#92;&quot;:83.152,&#92;&quot;MC14&#92;&quot;:83.56,&#92;&quot;MC114&#92;&quot;:83.288,&#92;&quot;hu.T70&#92;&quot;:83.152,&#92;&quot;MC129&#92;&quot;:83.288,&#92;&quot;MC102&#92;&quot;:83.152,&#92;&quot;MC118&#92;&quot;:83.016,&#92;&quot;hu.29&#92;&quot;:82.88,&#92;&quot;hu.29r&#92;&quot;:83.016,&#92;&quot;hu.28&#92;&quot;:82.473,&#92;&quot;hu.13&#92;&quot;:83.424,&#92;&quot;hu.63&#92;&quot;:82.88,&#92;&quot;hu.64&#92;&quot;:82.337,&#92;&quot;MC1&#92;&quot;:83.016,&#92;&quot;MC3&#92;&quot;:83.016,&#92;&quot;MC6&#92;&quot;:82.88,&#92;&quot;MC4&#92;&quot;:81.793,&#92;&quot;MC103&#92;&quot;:82.065,&#92;&quot;hu.24&#92;&quot;:82.745,&#92;&quot;hu.23&#92;&quot;:82.609},{&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC22&#92;&quot;,&#92;&quot;MC20&#92;&quot;:98.898,&#92;&quot;MC21&#92;&quot;:98.76,&#92;&quot;MC26&#92;&quot;:98.347,&#92;&quot;MC27&#92;&quot;:98.485,&#92;&quot;MC22&#92;&quot;:NaN,&#92;&quot;MC37&#92;&quot;:93.948,&#92;&quot;MC41&#92;&quot;:93.673,&#92;&quot;MC25&#92;&quot;:94.773,&#92;&quot;MC42&#92;&quot;:94.215,&#92;&quot;MC38&#92;&quot;:94.49,&#92;&quot;MC23&#92;&quot;:91.334,&#92;&quot;MC24&#92;&quot;:91.334,&#92;&quot;hu.56&#92;&quot;:82.609,&#92;&quot;hu.57&#92;&quot;:82.609,&#92;&quot;MC5&#92;&quot;:82.88,&#92;&quot;hu.35&#92;&quot;:82.745,&#92;&quot;hu.34&#92;&quot;:82.609,&#92;&quot;AAV2&#92;&quot;:83.016,&#92;&quot;MC19&#92;&quot;:82.745,&#92;&quot;MC126&#92;&quot;:83.016,&#92;&quot;hu.51&#92;&quot;:82.609,&#92;&quot;hu.52&#92;&quot;:82.065,&#92;&quot;hu.47&#92;&quot;:82.609,&#92;&quot;hu.45&#92;&quot;:82.609,&#92;&quot;MC13&#92;&quot;:82.88,&#92;&quot;hu.58&#92;&quot;:82.337,&#92;&quot;hu.49&#92;&quot;:82.337,&#92;&quot;MC8&#92;&quot;:83.288,&#92;&quot;MC12&#92;&quot;:83.152,&#92;&quot;MC9&#92;&quot;:83.152,&#92;&quot;MC14&#92;&quot;:83.56,&#92;&quot;MC114&#92;&quot;:83.288,&#92;&quot;hu.T70&#92;&quot;:83.016,&#92;&quot;MC129&#92;&quot;:83.152,&#92;&quot;MC102&#92;&quot;:82.88,&#92;&quot;MC118&#92;&quot;:82.88,&#92;&quot;hu.29&#92;&quot;:82.745,&#92;&quot;hu.29r&#92;&quot;:82.88,&#92;&quot;hu.28&#92;&quot;:82.337,&#92;&quot;hu.13&#92;&quot;:83.288,&#92;&quot;hu.63&#92;&quot;:82.88,&#92;&quot;hu.64&#92;&quot;:82.337,&#92;&quot;MC1&#92;&quot;:83.016,&#92;&quot;MC3&#92;&quot;:83.016,&#92;&quot;MC6&#92;&quot;:82.88,&#92;&quot;MC4&#92;&quot;:81.793,&#92;&quot;MC103&#92;&quot;:82.065,&#92;&quot;hu.24&#92;&quot;:82.609,&#92;&quot;hu.23&#92;&quot;:82.473}]&quot;' data-total-rows='5' data-total-columns='302' data-max-columns='50' data-banner-text='&quot;Only showing 50 of 302 columns.&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;capsid&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;MC20&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC21&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC26&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC27&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC22&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC37&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC41&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC25&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC42&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC38&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC23&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC24&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.56&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.57&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC5&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.35&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.34&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV2&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC19&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC126&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.51&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.52&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.47&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.45&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC13&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.58&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.49&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC8&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC12&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC9&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC14&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC114&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.T70&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC129&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC102&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC118&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.29&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.29r&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.28&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.13&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.63&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.64&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC3&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC6&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC4&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC103&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.24&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.23&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.22&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.19&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.20&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.27&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC110&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC10&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC15&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.LG15&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC109&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.T17&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC105&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC108&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.T32&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC131&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.T88&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC111&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.T41&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC107&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC125&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC130&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC127&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC7&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC100&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC11&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC16&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC120&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC57&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC116&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC115&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC121&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC119&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC106&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC112&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC124&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC104&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC113&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC122&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.T40&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC2&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC17&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC101&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC18&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC28&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC34&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.S17&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC33&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC29&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC32&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC30&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC39&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC31&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC40&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC117&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.16&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.15&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.18&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.7&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.61&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.60&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.4&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.2&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.3&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.25&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC123&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC43&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.11&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.10&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.9&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.55&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.54&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.53&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC128&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV3B&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV3&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC36&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC35&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;ch.5&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;ch.5R&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC97&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV6&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV6.2&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV6R2&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC98&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.48&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.48R3&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC132&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.43&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.44&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.46&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC53&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC54&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC55&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;cy.2&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV7&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.54&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.31&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.26&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.27&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.48&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.62&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.48R2&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.55&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.60&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.13&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;cy.5R4&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;cy.3&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;cy.5&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;cy.4&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;cy.6&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.22&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.19&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.37&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.37R2&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.35&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.36&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.23&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC56&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC99&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.6&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.25&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.14&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.24&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;bb.2&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;bb.1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.10&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.18&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.12&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.42&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.37&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.40&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.67&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.38&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.41&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV10&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.40&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.66&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.2&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.2R&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.17&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.64&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.64R1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.52&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.53&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.51&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.61&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.50&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.49&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.58&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.39&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.57&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.16&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.17&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;pi.1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;pi.3&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;pi.2&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.43&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV8&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.8&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.8R&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC95&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC96&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC94&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC93&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV9&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.32&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;hu.31&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC58&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC67&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC60&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC61&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC59&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC62&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC63&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC64&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC65&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC68&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC69&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC70&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC66&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC133&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC136&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC137&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC134&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.33&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh32.33&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.32&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV11&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;rh.34&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV4&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Bovine_AAV&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC72&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC80&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC73&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC71&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC78&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC81&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC82&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC79&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Mouse_AAV1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC74&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Avian_AAV_ATCC_VR-865&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC77&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC139&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC76&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC75&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC83&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC84&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Avian_AAV_strain_DA-1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Duck_parvovirus_strain_90-0219v&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Duck_parvovirus_strain_97-0104&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Duck_parvovirus_strain_90-0219&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Duck_parvovirus_strain_90-0215&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Muscovy_duck_parvovirus_X75093.1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Barbarie_duck_parvovirus&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Muscovy_duck_parvovirus_89384/FRANCE&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Muscovy_duck_parvovirus_AY510603.1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Goose_parvovirus_strain_86-1015&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Goose_parvovirus_strain_82-0308&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Goose_parvovirus_strain_82-0321&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Goose_parvovirus_strain_01-1001&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Goose_parvovirus_strain_82-0321v&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Goose_parvovirus_strain_V325/TW03&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Goose_parvovirus_strain_82-0408&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Goose_parvovirus_strain_99-0808&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Goose_parvovirus_virulent_B_strain&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Goose_parvovirus&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Snake_parvovirus_1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC44&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC45&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC135&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV-Go.1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC46&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;AAV5&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC52&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC49&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC50&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC138&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC87&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC88&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC86&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC85&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC91&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC92&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;Rat_AAV1&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC89&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC90&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC47&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC48&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;MC51&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Rows: 301\nColumns: 302\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "hDsu",
+      "code_hash": "918ce0b84a49c82ad092a813a903e069",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "First 20 capsids:\n['MC20', 'MC21', 'MC26', 'MC27', 'MC22', 'MC37', 'MC41', 'MC25', 'MC42', 'MC38', 'MC23', 'MC24', 'hu.56', 'hu.57', 'MC5', 'hu.35', 'hu.34', 'AAV2', 'MC19', 'MC126']\n\nLast 20 capsids:\n['MC135', 'AAV-Go.1', 'MC46', 'AAV5', 'MC52', 'MC49', 'MC50', 'MC138', 'MC87', 'MC88', 'MC86', 'MC85', 'MC91', 'MC92', 'Rat_AAV1', 'MC89', 'MC90', 'MC47', 'MC48', 'MC51']\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "zKTX",
+      "code_hash": "bbdf1d3585b16821267d9d14a2f1f240",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"identifying-novel-and-known-aav-capsids\">Identifying Novel and Known AAV Capsids</h2>\n<span class=\"paragraph\">Capsid names beginning with \"MC\" represent capsids discovered through\nthe MADCAP pipeline. The remaining capsids represent previously known\nnatural AAV isolates.</span>\n<span class=\"paragraph\">These groups are identified from their sequence names so that novel\nMADCAP capsids can be compared directly with known AAVs.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nCeV",
+      "code_hash": "bc2989010b09576df915efa4df756ea3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "MADCAP capsids: 139\nKnown capsids: 162\nTotal capsids: 301\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "MbrV",
+      "code_hash": "78761ef9693be235a23a05a9bf5af61c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"measuring-similarity-to-known-aav-capsids\">Measuring Similarity to Known AAV Capsids</h2>\n<span class=\"paragraph\">For each MADCAP capsid, sequence identity is compared against all\npreviously known capsids in the dataset.</span>\n<span class=\"paragraph\">Three summary measurements are calculated:</span>\n<ul>\n<li>nearest known capsid</li>\n<li>highest sequence identity to a known capsid</li>\n<li>average sequence identity to all known capsids</li>\n</ul>\n<span class=\"paragraph\">Sequence divergence from the nearest known capsid is also calculated\nas 100 minus the maximum sequence identity.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "qkiV",
+      "code_hash": "b708a82b99cf838041c2b5c77e60791a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "MADCAP capsids analyzed: 139\nKnown capsids compared: 162\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "mJyO",
+      "code_hash": "ef33e1a4246fe001ab209c45a5844d0b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='mJyO-0' random-id='1003e154-0c0c-2afc-efc9-e55236f063b3'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;Index0&#92;&quot;:0,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC20&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;hu.13&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:83.832,&#92;&quot;mean_known_identity&#92;&quot;:75.16993827160489,&#92;&quot;median_known_identity&#92;&quot;:79.268,&#92;&quot;sequence_divergence&#92;&quot;:16.168000000000006},{&#92;&quot;Index0&#92;&quot;:1,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC21&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;hu.13&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:83.696,&#92;&quot;mean_known_identity&#92;&quot;:75.03517901234567,&#92;&quot;median_known_identity&#92;&quot;:79.133,&#92;&quot;sequence_divergence&#92;&quot;:16.304000000000002},{&#92;&quot;Index0&#92;&quot;:2,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC26&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;hu.13&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:83.424,&#92;&quot;mean_known_identity&#92;&quot;:74.7553271604938,&#92;&quot;median_known_identity&#92;&quot;:78.7475,&#92;&quot;sequence_divergence&#92;&quot;:16.575999999999993},{&#92;&quot;Index0&#92;&quot;:3,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC27&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;hu.13&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:83.424,&#92;&quot;mean_known_identity&#92;&quot;:74.75945679012344,&#92;&quot;median_known_identity&#92;&quot;:78.7475,&#92;&quot;sequence_divergence&#92;&quot;:16.575999999999993},{&#92;&quot;Index0&#92;&quot;:4,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC22&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;hu.13&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:83.288,&#92;&quot;mean_known_identity&#92;&quot;:75.05235185185181,&#92;&quot;median_known_identity&#92;&quot;:79.268,&#92;&quot;sequence_divergence&#92;&quot;:16.712000000000003}]&quot;' data-total-rows='5' data-total-columns='6' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;capsid&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;nearest_known_capsid&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;nearest_known_identity&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;mean_known_identity&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;median_known_identity&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;sequence_divergence&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[[&quot;Index0&quot;,[&quot;integer&quot;,&quot;int64&quot;]]]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "YQlY",
+      "code_hash": "870466b6705b13c948bfb162c63ef33e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='YQlY-0' random-id='bb6d2139-cbdb-4d5c-bdb3-8ede703927ec'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;Index0&#92;&quot;:227,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC68&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;ch.5&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:58.411,&#92;&quot;mean_known_identity&#92;&quot;:56.21544444444441,&#92;&quot;median_known_identity&#92;&quot;:57.55,&#92;&quot;sequence_divergence&#92;&quot;:41.589},{&#92;&quot;Index0&#92;&quot;:300,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC51&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;rh.37R2&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:58.476,&#92;&quot;mean_known_identity&#92;&quot;:55.85381481481485,&#92;&quot;median_known_identity&#92;&quot;:56.562,&#92;&quot;sequence_divergence&#92;&quot;:41.524},{&#92;&quot;Index0&#92;&quot;:234,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC134&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;rh.14&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:58.579,&#92;&quot;mean_known_identity&#92;&quot;:55.44809259259261,&#92;&quot;median_known_identity&#92;&quot;:56.481,&#92;&quot;sequence_divergence&#92;&quot;:41.421},{&#92;&quot;Index0&#92;&quot;:299,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC48&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;AAV-Go.1&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:58.917,&#92;&quot;mean_known_identity&#92;&quot;:55.838561728395035,&#92;&quot;median_known_identity&#92;&quot;:56.658,&#92;&quot;sequence_divergence&#92;&quot;:41.083},{&#92;&quot;Index0&#92;&quot;:298,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC47&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;AAV-Go.1&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:59.363,&#92;&quot;mean_known_identity&#92;&quot;:56.14420370370372,&#92;&quot;median_known_identity&#92;&quot;:57.03,&#92;&quot;sequence_divergence&#92;&quot;:40.637},{&#92;&quot;Index0&#92;&quot;:229,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC70&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;rh.37R2&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:61.425,&#92;&quot;mean_known_identity&#92;&quot;:58.20656172839504,&#92;&quot;median_known_identity&#92;&quot;:59.406000000000006,&#92;&quot;sequence_divergence&#92;&quot;:38.575},{&#92;&quot;Index0&#92;&quot;:233,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC137&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;AAV3B&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:61.662,&#92;&quot;mean_known_identity&#92;&quot;:58.147987654321,&#92;&quot;median_known_identity&#92;&quot;:59.9055,&#92;&quot;sequence_divergence&#92;&quot;:38.338},{&#92;&quot;Index0&#92;&quot;:230,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC66&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;AAV3B&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:61.694,&#92;&quot;mean_known_identity&#92;&quot;:58.57300000000001,&#92;&quot;median_known_identity&#92;&quot;:60.24250000000001,&#92;&quot;sequence_divergence&#92;&quot;:38.306},{&#92;&quot;Index0&#92;&quot;:220,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC60&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;rh.57&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:61.772,&#92;&quot;mean_known_identity&#92;&quot;:59.17836419753091,&#92;&quot;median_known_identity&#92;&quot;:60.795,&#92;&quot;sequence_divergence&#92;&quot;:38.228},{&#92;&quot;Index0&#92;&quot;:224,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC63&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;rh.57&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:61.905,&#92;&quot;mean_known_identity&#92;&quot;:59.20569135802468,&#92;&quot;median_known_identity&#92;&quot;:60.927,&#92;&quot;sequence_divergence&#92;&quot;:38.095}]&quot;' data-total-rows='15' data-total-columns='6' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;capsid&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;nearest_known_capsid&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;nearest_known_identity&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;mean_known_identity&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;median_known_identity&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;sequence_divergence&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[[&quot;Index0&quot;,[&quot;integer&quot;,&quot;int64&quot;]]]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "osBq",
+      "code_hash": "d9f73c08316380b671aad3521167a7af",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='osBq-0' random-id='54474028-1fb4-cc57-4677-1ae97d6e9885'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;divergence_status&#92;&quot;:&#92;&quot;Similar to known isolate (&#92;&#92;u226595% identity)&#92;&quot;,&#92;&quot;count&#92;&quot;:76},{&#92;&quot;divergence_status&#92;&quot;:&#92;&quot;Divergent (&#92;u003c95% identity)&#92;&quot;,&#92;&quot;count&#92;&quot;:63}]&quot;' data-total-rows='2' data-total-columns='1' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;count&quot;,[&quot;integer&quot;,&quot;int64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[[&quot;divergence_status&quot;,[&quot;string&quot;,&quot;str&quot;]]]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "YECU",
+      "code_hash": "4fd5f6fc8d1c7481802e0a40b79da1df",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='YECU-0' random-id='67a59a69-0e04-b334-6174-ca81255859e3'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;divergence_status&#92;&quot;:&#92;&quot;Divergent (&#92;u003c95% identity)&#92;&quot;,&#92;&quot;number_of_capsids&#92;&quot;:63,&#92;&quot;mean_nearest_identity&#92;&quot;:75.06249206349206,&#92;&quot;mean_overall_identity&#92;&quot;:60.534122378992755,&#92;&quot;mean_sequence_divergence&#92;&quot;:24.937507936507934},{&#92;&quot;divergence_status&#92;&quot;:&#92;&quot;Similar to known isolate (&#92;&#92;u226595% identity)&#92;&quot;,&#92;&quot;number_of_capsids&#92;&quot;:76,&#92;&quot;mean_nearest_identity&#92;&quot;:99.03207894736842,&#92;&quot;mean_overall_identity&#92;&quot;:79.97432009421702,&#92;&quot;mean_sequence_divergence&#92;&quot;:0.9679210526315795}]&quot;' data-total-rows='2' data-total-columns='5' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;divergence_status&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;number_of_capsids&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;mean_nearest_identity&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;mean_overall_identity&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;mean_sequence_divergence&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "hZKE",
+      "code_hash": "0db717f9bfd3aaa69d678f5488760371",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "MADCAP capsids: 139\nKnown capsids: 162\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "zYfy",
+      "code_hash": "2eb122cb1b52152e7ea7d9f7a036bb4f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='zYfy-0' random-id='70218ad0-0842-cdaf-896f-95db2f0e8e89'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;Index0&#92;&quot;:227,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC68&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;ch.5&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:58.411,&#92;&quot;mean_known_identity&#92;&quot;:56.21544444444441,&#92;&quot;median_known_identity&#92;&quot;:57.55,&#92;&quot;sequence_divergence&#92;&quot;:41.589},{&#92;&quot;Index0&#92;&quot;:300,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC51&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;rh.37R2&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:58.476,&#92;&quot;mean_known_identity&#92;&quot;:55.85381481481485,&#92;&quot;median_known_identity&#92;&quot;:56.562,&#92;&quot;sequence_divergence&#92;&quot;:41.524},{&#92;&quot;Index0&#92;&quot;:234,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC134&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;rh.14&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:58.579,&#92;&quot;mean_known_identity&#92;&quot;:55.44809259259261,&#92;&quot;median_known_identity&#92;&quot;:56.481,&#92;&quot;sequence_divergence&#92;&quot;:41.421},{&#92;&quot;Index0&#92;&quot;:299,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC48&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;AAV-Go.1&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:58.917,&#92;&quot;mean_known_identity&#92;&quot;:55.838561728395035,&#92;&quot;median_known_identity&#92;&quot;:56.658,&#92;&quot;sequence_divergence&#92;&quot;:41.083},{&#92;&quot;Index0&#92;&quot;:298,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC47&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;AAV-Go.1&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:59.363,&#92;&quot;mean_known_identity&#92;&quot;:56.14420370370372,&#92;&quot;median_known_identity&#92;&quot;:57.03,&#92;&quot;sequence_divergence&#92;&quot;:40.637},{&#92;&quot;Index0&#92;&quot;:229,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC70&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;rh.37R2&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:61.425,&#92;&quot;mean_known_identity&#92;&quot;:58.20656172839504,&#92;&quot;median_known_identity&#92;&quot;:59.406000000000006,&#92;&quot;sequence_divergence&#92;&quot;:38.575},{&#92;&quot;Index0&#92;&quot;:233,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC137&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;AAV3B&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:61.662,&#92;&quot;mean_known_identity&#92;&quot;:58.147987654321,&#92;&quot;median_known_identity&#92;&quot;:59.9055,&#92;&quot;sequence_divergence&#92;&quot;:38.338},{&#92;&quot;Index0&#92;&quot;:230,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC66&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;AAV3B&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:61.694,&#92;&quot;mean_known_identity&#92;&quot;:58.57300000000001,&#92;&quot;median_known_identity&#92;&quot;:60.24250000000001,&#92;&quot;sequence_divergence&#92;&quot;:38.306},{&#92;&quot;Index0&#92;&quot;:220,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC60&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;rh.57&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:61.772,&#92;&quot;mean_known_identity&#92;&quot;:59.17836419753091,&#92;&quot;median_known_identity&#92;&quot;:60.795,&#92;&quot;sequence_divergence&#92;&quot;:38.228},{&#92;&quot;Index0&#92;&quot;:224,&#92;&quot;capsid&#92;&quot;:&#92;&quot;MC63&#92;&quot;,&#92;&quot;nearest_known_capsid&#92;&quot;:&#92;&quot;rh.57&#92;&quot;,&#92;&quot;nearest_known_identity&#92;&quot;:61.905,&#92;&quot;mean_known_identity&#92;&quot;:59.20569135802468,&#92;&quot;median_known_identity&#92;&quot;:60.927,&#92;&quot;sequence_divergence&#92;&quot;:38.095}]&quot;' data-total-rows='15' data-total-columns='6' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;capsid&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;nearest_known_capsid&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;nearest_known_identity&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;mean_known_identity&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;median_known_identity&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;sequence_divergence&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[[&quot;Index0&quot;,[&quot;integer&quot;,&quot;int64&quot;]]]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "oNLf",
+      "code_hash": "9a4c1faca80239d6cce43a9619a6ab42",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Lowest nearest-known identity: 58.411\nHighest nearest-known identity: 99.864\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "Fnsb",
+      "code_hash": "5d06307d46e8ef9b28f724bb63b14ca3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"validation-against-the-published-study\">Validation Against the Published Study</h2>\n<span class=\"paragraph\">The calculated nearest-known sequence identities range from approximately\n58.4% to 99.9%. This agrees with the range reported by Lyashenko et al.,\nsupporting that the sequence identity matrix has been interpreted correctly.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
